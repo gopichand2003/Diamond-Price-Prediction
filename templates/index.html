@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> -->
+</head>
+<body>
+
+
+    <h1>Diamond Price Prediction</h1>
+    <form action="{{ url_for('home')}}" method="POST">
+        <label>Enter carat :</label>
+        <input type="text" name="carat" required>
+        <label>Enter cut :</label>
+        <input type="text" name="cut" required placeholder="Ideal/Premium/Very Good/Good/Fair">
+        <label>Enter color :</label>
+        <input type="text" name="color" required placeholder="D/E/F/G/H/I/J">
+        <label>Enter clarity :</label>
+        <input type="text" name="clarity" required placeholder="SI1/SI2/VS1/VS2/IF/I1/VVS1/VVS2">
+        <label>Enter depth :</label>
+        <input type="text" name="depth" required>
+        <label>Enter table :</label>
+        <input type="text" name="table" required>
+        <label>Enter X :</label>
+        <input type="text" name="x" required>
+        <label>Enter Y :</label>
+        <input type="text" name="y" required>
+        <label>Enter Z :</label>
+        <input type="text" name="z" required>
+
+            <span>
+                <h3>Predicted Diamond Price : </h3>
+                <h4>{{result}}</h4>
+            </span>
+        <button action= "POST" type="submit">submit</button>
+
+
+
+    <style>
+        /* Apply styles to the body */
+/* Apply styles to the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+h1 {
+    text-align: center;
+    color: #3498db;
+    margin-top: 20px;
+}
+
+/* Style the form container */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style labels for form elements */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Style text input field */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style the submit button on hover */
+input[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+/* Style the result headings */
+h3 {
+    color: #2ecc71;
+    margin-top: 15px;
+}
+
+
+    </style>   
+</body>
+</html>
